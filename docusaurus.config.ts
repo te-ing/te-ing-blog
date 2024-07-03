@@ -3,7 +3,7 @@ import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 const config: Config = {
   title: 'te-ing blog',
-  tagline: '김태중 블로그',
+  tagline: '김태중 블로그!',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
