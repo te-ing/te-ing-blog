@@ -2,8 +2,8 @@ import {themes as prismThemes} from 'prism-react-renderer';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 const config: Config = {
-  title: 'te-ing blog',
-  tagline: '김태중 블로그!',
+  title: 'Write-ing',
+  tagline: '김태중 프론트엔드 개발 블로그',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -57,21 +57,17 @@ const config: Config = {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
-      title: 'My Site',
+      title: '김태중 블로그',
       logo: {
-        alt: 'My Site Logo',
+        alt: 'te-ing Logo',
         src: 'img/logo.svg',
       },
       items: [
+        {to: '/til', label: 'TIL', position: 'left'},
+        {to: '/project', label: 'Project', position: 'left'},
+        {to: '/aboutMe', label: 'About Me', position: 'right'},
         {
-          type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
-          position: 'left',
-          label: 'Tutorial',
-        },
-        {to: '/blog', label: 'Blog', position: 'left'},
-        {
-          href: 'https://github.com/facebook/docusaurus',
+          href: 'https://github.com/te-ing',
           label: 'GitHub',
           position: 'right',
         },
