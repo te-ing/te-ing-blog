@@ -33,11 +33,9 @@ const config: Config = {
       'classic',
       {
         docs: {
+          path: 'til',
           sidebarPath: './sidebars.ts',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          routeBasePath: 'til',
         },
         blog: {
           showReadingTime: true,
@@ -80,25 +78,17 @@ const config: Config = {
           title: 'Docs',
           items: [
             {
-              label: 'Tutorial',
-              to: '/docs/intro',
+              label: 'TIL',
+              to: '/til',
             },
           ],
         },
         {
-          title: 'Community',
+          title: 'Contact',
           items: [
             {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-            },
-            {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-            {
-              label: 'Twitter',
-              href: 'https://twitter.com/docusaurus',
+              label: 'Email',
+              href: 'mailto:hi2177@naver.com',
             },
           ],
         },
@@ -107,7 +97,7 @@ const config: Config = {
           items: [
             {
               label: 'Blog',
-              to: '/blog',
+              to: 'https://velog.io/@te-ing',
             },
             {
               label: 'GitHub',
@@ -116,7 +106,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} te-ing, Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,
