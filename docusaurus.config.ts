@@ -1,5 +1,5 @@
-import {themes as prismThemes} from 'prism-react-renderer';
-import type {Config} from '@docusaurus/types';
+import { themes as prismThemes } from 'prism-react-renderer';
+import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 const config: Config = {
   title: 'Write-ing',
@@ -63,9 +63,9 @@ const config: Config = {
         src: 'img/logo.svg',
       },
       items: [
-        {to: '/til', label: 'TIL', position: 'left'},
-        {to: '/project', label: 'Project', position: 'left'},
-        {to: '/aboutMe', label: 'About Me', position: 'right'},
+        { to: '/til', label: 'TIL', position: 'left' },
+        { to: '/project', label: 'Project', position: 'left' },
+        { to: '/aboutMe', label: 'About Me', position: 'right' },
         {
           href: 'https://github.com/te-ing',
           label: 'GitHub',

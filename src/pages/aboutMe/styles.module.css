@@ -1,7 +1,7 @@
 .resume1 {
-  content: url("./resume1.jpg");
+  content: url('./resume1.jpg');
   margin-bottom: -80px;
 }
 .resume2 {
-  content: url("./resume2.jpg");
+  content: url('./resume2.jpg');
 }
