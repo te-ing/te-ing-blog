@@ -1,0 +1,20 @@
+.company {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  > div {
+    h3 {
+      margin: 0;
+    }
+    display: flex;
+    gap: 8px;
+    font-weight: bold;
+    font-size: 14px;
+    align-items: flex-end;
+  }
+
+  .subTitle {
+    font-size: 12px;
+    color: #646464;
+  }
+}

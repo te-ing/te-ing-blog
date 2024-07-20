@@ -1,6 +1,7 @@
 import Layout from '@theme/Layout';
 import styles from './index.module.css';
 import Intro from './Intro';
+import Work from './Work';
 
 export default function AboutMe(): JSX.Element {
   return (
@@ -15,6 +16,7 @@ export default function AboutMe(): JSX.Element {
             <h3>프론트엔드 개발자</h3>
           </div>
           <Intro />
+          <Work />
         </div>
       </main>
     </Layout>
