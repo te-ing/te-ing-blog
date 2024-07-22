@@ -1,4 +1,4 @@
-import { CAREER_DATA } from './resumeConstants';
+import { CAREER_DATA } from './_resumeConstants';
 import styles from './workCareers.module.css';
 import React from 'react';
 
