@@ -15,7 +15,7 @@ const Education = () => {
     },
   ];
   return (
-    <section className={styles.wrapper}>
+    <section>
       <h2>Education</h2>
       {EDUCATION_DATA.map(({ title, period, body }) => {
         return (
@@ -27,7 +27,7 @@ const Education = () => {
               <h3>{title}</h3>
               {body.map(content => {
                 return (
-                  <ul className={styles.title}>
+                  <ul>
                     <li>{content}</li>
                   </ul>
                 );
