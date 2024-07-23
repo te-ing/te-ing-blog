@@ -2,6 +2,7 @@ import Layout from '@theme/Layout';
 import styles from './index.module.css';
 import Intro from './Intro';
 import Work from './Work';
+import Education from './Education';
 
 export default function AboutMe(): JSX.Element {
   return (
@@ -17,6 +18,7 @@ export default function AboutMe(): JSX.Element {
           </div>
           <Intro />
           <Work />
+          <Education />
         </div>
       </main>
     </Layout>
