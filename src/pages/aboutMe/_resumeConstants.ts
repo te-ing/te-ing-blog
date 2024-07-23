@@ -62,3 +62,16 @@ export const CAREER_DATA: WorkCareersProp[] = [
     ],
   },
 ];
+
+export const EDUCATION_DATA = [
+  {
+    title: '프로그래머스 웹 데브코스',
+    period: '2021.07 ~ 2021.12',
+    body: ['부트캠프 프론트엔드 과정'],
+  },
+  {
+    title: '홍익대학교',
+    period: '2015.03 ~ 2021.08',
+    body: ['광고홍보학부 전공'],
+  },
+];
