@@ -36,6 +36,7 @@ const config: Config = {
           path: 'til',
           sidebarPath: './sidebars.ts',
           routeBasePath: 'til',
+          showLastUpdateTime: true,
         },
         blog: {
           showReadingTime: true,
