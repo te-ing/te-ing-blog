@@ -1,4 +1,4 @@
-import styles from './aboutMe.module.css';
+import styles from './_style/aboutMe.module.css';
 import React from 'react';
 
 export default function AboutMe() {

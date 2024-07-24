@@ -1,5 +1,5 @@
 import { getYearMonthDifference } from '@site/src/util/dateUtil';
-import styles from './work.module.css';
+import styles from './_style/work.module.css';
 import React from 'react';
 import WorkCareers from './WorkCareers';
 

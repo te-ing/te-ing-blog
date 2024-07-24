@@ -1,5 +1,5 @@
 import { CAREER_DATA } from './_resumeConstants';
-import styles from './workCareers.module.css';
+import styles from './_style/workCareers.module.css';
 import React from 'react';
 
 export default function WorkCareers() {
