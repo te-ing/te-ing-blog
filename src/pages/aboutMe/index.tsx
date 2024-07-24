@@ -4,6 +4,7 @@ import Intro from './Intro';
 import Work from './Work';
 import Education from './Education';
 import Project from './Project';
+import AboutMeSection from './AboutMe';
 
 export default function AboutMe(): JSX.Element {
   return (
@@ -21,6 +22,7 @@ export default function AboutMe(): JSX.Element {
           <Work />
           <Education />
           <Project />
+          <AboutMeSection />
         </div>
       </main>
     </Layout>
