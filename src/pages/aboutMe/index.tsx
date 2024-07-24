@@ -3,6 +3,7 @@ import styles from './index.module.css';
 import Intro from './Intro';
 import Work from './Work';
 import Education from './Education';
+import Project from './Project';
 
 export default function AboutMe(): JSX.Element {
   return (
@@ -19,6 +20,7 @@ export default function AboutMe(): JSX.Element {
           <Intro />
           <Work />
           <Education />
+          <Project />
         </div>
       </main>
     </Layout>
