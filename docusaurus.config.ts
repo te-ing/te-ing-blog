@@ -32,18 +32,12 @@ const config: Config = {
     [
       'classic',
       {
-        docs: {
-          path: 'til',
-          sidebarPath: './sidebars.ts',
-          routeBasePath: 'til',
-          showLastUpdateTime: true,
-        },
         blog: {
+          path: 'til',
+          routeBasePath: 'til',
           showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          readingTime: ({ content, defaultReadingTime }) =>
+            defaultReadingTime({ content, options: { wordsPerMinute: 300 } }),
         },
         theme: {
           customCss: './src/css/custom.scss',
@@ -63,7 +57,6 @@ const config: Config = {
       },
       items: [
         { to: '/til', label: 'TIL', position: 'left' },
-        { to: '/project', label: 'Project', position: 'left' },
         { to: '/aboutMe', label: 'About Me', position: 'right' },
         {
           href: 'https://github.com/te-ing',
