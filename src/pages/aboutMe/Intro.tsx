@@ -1,5 +1,5 @@
 import { EmailIcon, VelogIcon, GithubIcon } from '@site/static/svg';
-import styles from './_style/intro.module.css';
+import styles from './_style/intro.module.scss';
 
 export default function Intro(): JSX.Element {
   return (

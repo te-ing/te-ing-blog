@@ -1,5 +1,5 @@
 import { PROJECT_DATA } from './_resumeConstants';
-import styles from './_style/project.module.css';
+import styles from './_style/project.module.scss';
 import React from 'react';
 import { GithubIcon, ClipIcon } from '@site/static/svg';
 

@@ -1,5 +1,5 @@
 import Layout from '@theme/Layout';
-import styles from './_style/index.module.css';
+import styles from './_style/index.module.scss';
 import Intro from './Intro';
 import Work from './Work';
 import Education from './Education';

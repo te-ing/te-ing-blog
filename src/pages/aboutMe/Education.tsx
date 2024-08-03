@@ -1,5 +1,5 @@
 import { EDUCATION_DATA } from './_resumeConstants';
-import styles from './_style/education.module.css';
+import styles from './_style/education.module.scss';
 import React from 'react';
 
 const Education = () => {
