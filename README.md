@@ -1,7 +1,6 @@
+<img src="https://github.com/user-attachments/assets/a2d0eb20-7835-4247-b8e0-cd2a365200e6" width="300" height="300">
 
-![logo](https://github.com/user-attachments/assets/a2d0eb20-7835-4247-b8e0-cd2a365200e6)
-
-[te-ing.github.io/te-ing-blog/](te-ing.github.io/te-ing-blog/)
+[김태중 블로그 | Write-ing](te-ing.github.io/te-ing-blog/)
 
 [Docusaurus](https://docusaurus.io/)을 기반으로 만들어진 개인 기술 블로그입니다.
 
