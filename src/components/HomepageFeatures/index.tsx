@@ -10,32 +10,44 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
-    description: (
-      <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
-      </>
-    ),
-  },
-  {
-    title: 'Focus on What Matters',
+    title: '개발 기술 정리',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        <div>
+          새롭게 알게 된 내용을 정리합니다.
+          <br />
+          더 잘 기억할 수 있도록 <br />
+          그리고 다시 볼 수 있도록 씁니다.
+        </div>
       </>
     ),
   },
   {
-    title: 'Powered by React',
+    title: '문제 해결 과정 공유',
+    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    description: (
+      <>
+        <div>
+          겪었던 문제과 해결 과정을 공유합니다.
+          <br />
+          다른 개발자분들의 문제 해결에 <br />
+          조금이나마 도움이 되었으면 합니다.
+        </div>
+      </>
+    ),
+  },
+  {
+    title: '생각과 회고',
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        <div>
+          느낌과 생각을 기록합니다.
+          <br />
+          한 개발자의 생각을 엿보는 마음으로 <br />
+          가볍게 읽어주시길 바랍니다.
+        </div>
       </>
     ),
   },
