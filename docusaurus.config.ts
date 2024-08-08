@@ -90,7 +90,7 @@ const config: Config = {
           title: 'More',
           items: [
             {
-              label: 'Blog',
+              label: 'Velog',
               to: 'https://velog.io/@te-ing',
             },
             {
