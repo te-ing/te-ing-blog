@@ -36,6 +36,8 @@ const config: Config = {
           path: 'til',
           routeBasePath: 'til',
           showReadingTime: true,
+          blogSidebarCount: 'ALL',
+          blogSidebarTitle: 'TIL',
           readingTime: ({ content, defaultReadingTime }) =>
             defaultReadingTime({ content, options: { wordsPerMinute: 300 } }),
         },
@@ -118,6 +120,8 @@ const config: Config = {
         id: 'think',
         routeBasePath: 'think',
         path: 'think',
+        blogSidebarCount: 'ALL',
+        blogSidebarTitle: 'Think',
       },
     ],
     [
@@ -126,6 +130,8 @@ const config: Config = {
         id: 'problem',
         routeBasePath: 'problem',
         path: 'problem',
+        blogSidebarCount: 'ALL',
+        blogSidebarTitle: 'Problem',
       },
     ],
   ],
