@@ -57,6 +57,8 @@ const config: Config = {
       },
       items: [
         { to: '/til', label: 'TIL', position: 'left' },
+        { to: '/problem', label: 'Problem', position: 'left' },
+        { to: '/think', label: 'Think', position: 'left' },
         { to: '/aboutMe', label: 'About Me', position: 'right' },
         {
           href: 'https://github.com/te-ing',
@@ -108,7 +110,25 @@ const config: Config = {
     },
   } satisfies Preset.ThemeConfig,
 
-  plugins: ['docusaurus-plugin-sass'],
+  plugins: [
+    'docusaurus-plugin-sass',
+    [
+      '@docusaurus/plugin-content-blog',
+      {
+        id: 'think',
+        routeBasePath: 'think',
+        path: 'think',
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-blog',
+      {
+        id: 'problem',
+        routeBasePath: 'problem',
+        path: 'problem',
+      },
+    ],
+  ],
 };
 
 export default config;
