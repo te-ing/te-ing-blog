@@ -1,8 +1,10 @@
 import clsx from 'clsx';
 import Heading from '@theme/Heading';
 import styles from './styles.module.scss';
+import Link from '@docusaurus/Link';
 
 type FeatureItem = {
+  id: string;
   title: string;
   Svg: React.ComponentType<React.ComponentProps<'svg'>>;
   description: JSX.Element;
@@ -10,6 +12,7 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
+    id: 'til',
     title: '개발 기술 정리',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
@@ -24,6 +27,7 @@ const FeatureList: FeatureItem[] = [
     ),
   },
   {
+    id: 'problem',
     title: '문제 해결 과정 공유',
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
@@ -38,6 +42,7 @@ const FeatureList: FeatureItem[] = [
     ),
   },
   {
+    id: 'think',
     title: '생각과 회고',
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
@@ -53,16 +58,18 @@ const FeatureList: FeatureItem[] = [
   },
 ];
 
-function Feature({ title, Svg, description }: FeatureItem) {
+function Feature({ id, title, Svg, description }: FeatureItem) {
   return (
     <div className={clsx('col col--4')}>
-      <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
-      </div>
-      <div className="text--center padding-horiz--md">
-        <Heading as="h3">{title}</Heading>
-        <p>{description}</p>
-      </div>
+      <Link to={id}>
+        <div className="text--center">
+          <Svg className={styles.featureSvg} role="img" />
+        </div>
+        <div className="text--center padding-horiz--md">
+          <Heading as="h3">{title}</Heading>
+          <p>{description}</p>
+        </div>
+      </Link>
     </div>
   );
 }
