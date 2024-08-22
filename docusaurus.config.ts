@@ -61,7 +61,7 @@ const config: Config = {
         { to: '/til', label: 'TIL', position: 'left' },
         { to: '/problem', label: 'Problem', position: 'left' },
         { to: '/think', label: 'Think', position: 'left' },
-        { to: '/aboutMe', label: 'About Me', position: 'right' },
+        // { to: '/aboutMe', label: 'About Me', position: 'right' },
         {
           href: 'https://github.com/te-ing',
           label: 'GitHub',
