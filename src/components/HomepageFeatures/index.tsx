@@ -6,7 +6,7 @@ import Link from '@docusaurus/Link';
 type FeatureItem = {
   id: string;
   title: string;
-  Svg: React.ComponentType<React.ComponentProps<'svg'>>;
+  previewLink: JSX.Element;
   description: JSX.Element;
 };
 
@@ -14,7 +14,11 @@ const FeatureList: FeatureItem[] = [
   {
     id: 'til',
     title: '개발 기술 정리',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    previewLink: (
+      <Link className={styles.link} to="til/cra-to-vite-migration">
+        빌드시간 개선을 위한 CRA to Vite Migration
+      </Link>
+    ),
     description: (
       <>
         <div>
@@ -29,7 +33,6 @@ const FeatureList: FeatureItem[] = [
   {
     id: 'problem',
     title: '문제 해결 과정 공유',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
         <div>
@@ -40,11 +43,26 @@ const FeatureList: FeatureItem[] = [
         </div>
       </>
     ),
+    previewLink: (
+      <Link
+        className={styles.link}
+        to="problem/2024/06/02/NextJS-14.0.2-Server-Action-로그인-시-cookie가-저장되지-않는-문제"
+      >
+        {'NextJS 14.0.2 Server Action 로그인 시\ncookie가 저장되지 않는 문제'}
+      </Link>
+    ),
   },
   {
     id: 'think',
     title: '생각과 회고',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    previewLink: (
+      <Link
+        className={styles.link}
+        to="think/2024/10/23/개발자로%20취업한%20지%202년%20즈음이%20지난%20시점에서%20적는%20회고"
+      >
+        {'개발자로 취업한 지 2년 즈음이\n지난 시점에서 적는 회고'}
+      </Link>
+    ),
     description: (
       <>
         <div>
@@ -58,18 +76,17 @@ const FeatureList: FeatureItem[] = [
   },
 ];
 
-function Feature({ id, title, Svg, description }: FeatureItem) {
+function Feature({ id, title, previewLink, description }: FeatureItem) {
   return (
     <div className={clsx('col col--4')}>
       <Link to={id}>
-        <div className="text--center">
-          <Svg className={styles.featureSvg} role="img" />
-        </div>
         <div className="text--center padding-horiz--md">
           <Heading as="h3">{title}</Heading>
           <p>{description}</p>
         </div>
       </Link>
+      <p className="text--center margin--none text--bold">추천 포스팅</p>
+      <div className="text--center">{previewLink}</div>
     </div>
   );
 }
