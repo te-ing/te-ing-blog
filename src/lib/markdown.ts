@@ -83,9 +83,7 @@ export function getAllArticles(): ArticlePreview[] {
     };
   });
 
-  return allArticlesData.sort(
-    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
-  );
+  return allArticlesData.sort((a, b) => b.id.localeCompare(a.id));
 }
 
 export function getFeaturedArticles(): ArticlePreview[] {
