@@ -7,7 +7,7 @@ export default function BlogPage() {
 
   return (
     <Layout>
-      <div className="max-w-4xl mx-auto py-8">
+      <div className="max-w-[800px] mx-auto py-8 px-4">
         <h1 className="text-3xl font-bold mb-8">Blog Posts</h1>
         <div className="space-y-6">
           {articles.map((article) => (
@@ -18,7 +18,7 @@ export default function BlogPage() {
                 </h2>
               </Link>
               <div className="text-gray-600 text-sm mt-2">{article.date}</div>
-              <p className="mt-2 text-gray-700">{article.excerpt}</p>
+              <p className="mt-2 text-gray-700">{article.description}</p>
             </article>
           ))}
         </div>

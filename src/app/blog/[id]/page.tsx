@@ -1,5 +1,6 @@
 import { getArticleData, getAllArticleIds } from '@/lib/markdown';
 import Layout from '@/components/Layout';
+import MarkdownContent from '@/components/MarkdownContent';
 
 export async function generateStaticParams() {
   const paths = getAllArticleIds();
@@ -15,13 +16,12 @@ export default async function ArticlePage({
 
   return (
     <Layout>
-      <article className="max-w-4xl mx-auto py-8">
-        <h1 className="text-3xl font-bold mb-4">{article.title}</h1>
-        <div className="text-gray-600 text-sm mb-8">{article.date}</div>
-        <div
-          className="prose prose-lg max-w-none"
-          dangerouslySetInnerHTML={{ __html: article.content }}
-        />
+      <article className="max-w-[800px] mx-auto py-8 px-4">
+        <header className="mb-8">
+          <h1 className="text-3xl font-bold mb-4">{article.title}</h1>
+          <div className="text-gray-600 text-sm">{article.date}</div>
+        </header>
+        <MarkdownContent content={article.content} />
       </article>
     </Layout>
   );
