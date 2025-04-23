@@ -29,7 +29,7 @@ export default function BlogPosts({ articles, tags }: BlogPostsProps) {
   );
 
   const filteredArticles = selectedTag
-    ? articles.filter((article) => article.tags.includes(selectedTag))
+    ? articles.filter((article) => article.tags?.includes(selectedTag))
     : articles;
 
   return (
@@ -76,7 +76,7 @@ export default function BlogPosts({ articles, tags }: BlogPostsProps) {
             <div className="text-gray-600 text-sm mt-2">{article.date}</div>
             <p className="mt-2 text-gray-700">{article.description}</p>
             <div className="mt-2 flex flex-wrap gap-2">
-              {article.tags.map((tag) => (
+              {article.tags?.map((tag) => (
                 <button
                   key={tag}
                   onClick={() => handleTagClick(tag)}

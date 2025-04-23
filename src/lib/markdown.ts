@@ -21,7 +21,7 @@ export interface ArticlePreview {
   title: string;
   date: string;
   description: string;
-  tags: string[];
+  tags?: string[];
 }
 
 function sanitizeFileName(fileName: string): string {
@@ -78,7 +78,7 @@ export function getAllArticles(): ArticlePreview[] {
         title: string;
         date: string;
         description: string;
-        tags: string[];
+        tags?: string[];
       }),
     };
   });
@@ -95,7 +95,7 @@ export function getAllTags(): string[] {
   const articles = getAllArticles();
   const tags = new Set<string>();
   articles.forEach((article) => {
-    article.tags.forEach((tag) => tags.add(tag));
+    article.tags?.forEach((tag) => tags.add(tag));
   });
   return Array.from(tags).sort();
 }
