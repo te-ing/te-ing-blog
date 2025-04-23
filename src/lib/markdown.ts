@@ -3,6 +3,7 @@ import path from 'path';
 import matter from 'gray-matter';
 import { remark } from 'remark';
 import html from 'remark-html';
+import { featuredArticles } from '@/config/featured-articles';
 
 const articlesDirectory = path.join(process.cwd(), 'src/content/articles');
 
@@ -60,4 +61,9 @@ export function getAllArticles(): ArticlePreview[] {
   return allArticlesData.sort(
     (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
   );
+}
+
+export function getFeaturedArticles(): ArticlePreview[] {
+  const articles = getAllArticles();
+  return articles.filter((article) => featuredArticles.includes(article.id));
 }
