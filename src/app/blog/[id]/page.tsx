@@ -10,9 +10,10 @@ export async function generateStaticParams() {
 export default async function ArticlePage({
   params,
 }: {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 }) {
-  const article = await getArticleData(params.id);
+  const { id } = await params;
+  const article = await getArticleData(id);
 
   return (
     <Layout>
