@@ -14,12 +14,6 @@ export default function Header() {
             <Link href="/about" className="text-gray-600 hover:text-gray-900">
               About
             </Link>
-            <Link href="/premium" className="text-gray-600 hover:text-gray-900">
-              Premium
-            </Link>
-            <Link href="/letters" className="text-gray-600 hover:text-gray-900">
-              Letters
-            </Link>
             <Link href="/blog" className="text-gray-600 hover:text-gray-900">
               All Posts
             </Link>
