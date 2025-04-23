@@ -24,15 +24,28 @@ export interface ArticlePreview {
   tags: string[];
 }
 
+function sanitizeFileName(fileName: string): string {
+  // 파일 확장자 제거
+  const nameWithoutExt = fileName.replace(/\.md$/, '');
+  // 한글과 특수문자를 URL에 안전한 형태로 변환
+  return encodeURIComponent(nameWithoutExt);
+}
+
+function desanitizeFileName(sanitizedId: string): string {
+  // URL에 안전한 형태를 원래 형태로 변환
+  return decodeURIComponent(sanitizedId);
+}
+
 export function getAllArticleIds() {
   const fileNames = fs.readdirSync(articlesDirectory);
   return fileNames.map((fileName) => {
-    return { params: { id: fileName.replace(/\.md$/, '') } };
+    return { params: { id: sanitizeFileName(fileName) } };
   });
 }
 
 export async function getArticleData(id: string): Promise<Article> {
-  const fullPath = path.join(articlesDirectory, `${id}.md`);
+  const originalId = desanitizeFileName(id);
+  const fullPath = path.join(articlesDirectory, `${originalId}.md`);
   const fileContents = fs.readFileSync(fullPath, 'utf8');
 
   const { data, content } = matter(fileContents);
