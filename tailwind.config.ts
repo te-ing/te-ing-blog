@@ -8,16 +8,10 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      typography: {
-        DEFAULT: {
-          css: {
-            maxWidth: '65ch',
-            color: 'inherit',
-            a: { color: 'inherit', textDecoration: 'none', fontWeight: '500' },
-            strong: { color: 'inherit' },
-            code: { color: 'inherit' },
-          },
-        },
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+        'gradient-conic':
+          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
     },
   },
