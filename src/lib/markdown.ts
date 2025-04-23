@@ -13,6 +13,7 @@ export interface Article {
   date: string;
   content: string;
   description: string;
+  tags: string[];
 }
 
 export interface ArticlePreview {
@@ -20,6 +21,7 @@ export interface ArticlePreview {
   title: string;
   date: string;
   description: string;
+  tags: string[];
 }
 
 export function getAllArticleIds() {
@@ -40,7 +42,12 @@ export async function getArticleData(id: string): Promise<Article> {
   return {
     id,
     content: contentHtml,
-    ...(data as { title: string; date: string; description: string }),
+    ...(data as {
+      title: string;
+      date: string;
+      description: string;
+      tags: string[];
+    }),
   };
 }
 
@@ -54,7 +61,12 @@ export function getAllArticles(): ArticlePreview[] {
 
     return {
       id,
-      ...(data as { title: string; date: string; description: string }),
+      ...(data as {
+        title: string;
+        date: string;
+        description: string;
+        tags: string[];
+      }),
     };
   });
 
@@ -66,4 +78,13 @@ export function getAllArticles(): ArticlePreview[] {
 export function getFeaturedArticles(): ArticlePreview[] {
   const articles = getAllArticles();
   return articles.filter((article) => featuredArticles.includes(article.id));
+}
+
+export function getAllTags(): string[] {
+  const articles = getAllArticles();
+  const tags = new Set<string>();
+  articles.forEach((article) => {
+    article.tags.forEach((tag) => tags.add(tag));
+  });
+  return Array.from(tags).sort();
 }

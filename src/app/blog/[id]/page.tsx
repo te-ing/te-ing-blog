@@ -21,7 +21,7 @@ export default async function ArticlePage({
           <h1 className="text-3xl font-bold mb-4">{article.title}</h1>
           <div className="text-gray-600 text-sm">{article.date}</div>
         </header>
-        <MarkdownContent content={article.content} />
+        <MarkdownContent content={article.content} tags={article.tags} />
       </article>
     </Layout>
   );

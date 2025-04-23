@@ -1,15 +1,38 @@
 import { markdownStyles } from '@/styles/markdown';
+import Link from 'next/link';
 
 interface MarkdownContentProps {
   content: string;
+  tags?: string[];
 }
 
-export default function MarkdownContent({ content }: MarkdownContentProps) {
+export default function MarkdownContent({
+  content,
+  tags,
+}: MarkdownContentProps) {
   return (
-    <div
-      className={markdownStyles.content}
-      dangerouslySetInnerHTML={{ __html: processMarkdownContent(content) }}
-    />
+    <div>
+      <div
+        className={markdownStyles.content}
+        dangerouslySetInnerHTML={{ __html: processMarkdownContent(content) }}
+      />
+      {tags && tags.length > 0 && (
+        <div className="mt-8 pt-4 border-t">
+          <h3 className="text-lg font-semibold mb-2">Tags</h3>
+          <div className="flex flex-wrap gap-2">
+            {tags.map((tag) => (
+              <Link
+                key={tag}
+                href={`/blog?tag=${tag}`}
+                className="px-3 py-1 rounded-full text-sm bg-gray-100 text-gray-800 hover:bg-gray-200 transition-colors"
+              >
+                #{tag}
+              </Link>
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
   );
 }
 

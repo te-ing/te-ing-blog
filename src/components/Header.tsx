@@ -20,10 +20,7 @@ export default function Header() {
             <Link href="/letters" className="text-gray-600 hover:text-gray-900">
               Letters
             </Link>
-            <Link
-              href="/all-posts"
-              className="text-gray-600 hover:text-gray-900"
-            >
+            <Link href="/blog" className="text-gray-600 hover:text-gray-900">
               All Posts
             </Link>
           </div>

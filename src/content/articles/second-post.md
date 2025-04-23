@@ -2,6 +2,7 @@
 title: '두 번째 포스트'
 date: '2024-03-21'
 description: '이것은 두 번째 블로그 포스트입니다.'
+tags: ['Markdown', 'TypeScript', 'Tutorial']
 ---
 
 # 두 번째 포스트
